@@ -22,10 +22,10 @@
             <div class="shadow-lg border ring-black ring-opacity-5 overflow-hidden rounded-lg">
               <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                 {% for subLink in link.links %}
-                <a class="-m-3 p-3 flex items start rounded-lg hover:bg-gray-100">
+                <a href="{{ subLink.url }}" class="-m-3 p-3 flex items start rounded-lg hover:bg-gray-100">
                   <div class="ml-4">
                     <p class="text-gray-900 text-base font-medium">
-                      {{subLink.title}}
+                      {{subLink.title}}p
                     </p>
                   </div>
                 </a>
@@ -91,7 +91,7 @@
 
               <div x-show="{{link_handle}}" class="grid gap-y-7 py-3">
                 {% for subLink in link.links %}
-                    <a href="#"
+                    <a href="{{ subLink.url }}"
                   class="-m-3 p-3 mt-2 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
                   <span class="ml-3 text-base font-medium text-gray-500">{{subLink.title}}</span>
                 </a>

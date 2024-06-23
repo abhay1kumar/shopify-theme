@@ -37,7 +37,6 @@
           </div>
         {% endfor %}
       </div>
-
       <div class="md:hidden">
         <div class="swiper h-94">
           <div class="swiper-wrapper">
@@ -58,7 +57,6 @@
         </div>
       </div>
     </div>
-
     <div class="product--information sticky top-5 p-2">
       {% form 'product'
         , product
@@ -88,6 +86,7 @@
                   <span class="px-5 py-1 text-sm font-bold bg-red-500 rounded-full text-white mx-4">Sale</span>
                 {% endif %}
               </div>
+              sdsd
             {% when 'variant_selector' %}
               <div class="my-3">
                 {% unless product.has_only_default_variant %}
