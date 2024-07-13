@@ -8,13 +8,12 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     {{ content_for_header }}
-     {% comment %} <link rel="stylesheet" href="application.css"> {% endcomment %}
-    <!-- Header hook for plugins -->
+
     {{ 'application.css' | asset_url | stylesheet_tag }}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
      <script src="{{ 'application.js' | asset_url }}" async></script>
   </head>
-  {% section 'header' %}
+  {% comment %} {% section 'header' %} {% endcomment %}
   <body >
     <main role="main">
       {{ content_for_layout }}

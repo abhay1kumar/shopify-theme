@@ -1,0 +1,41 @@
+<!-- sections/footer.liquid -->
+
+<footer class="bg-gray-900 text-white">
+  <div class="container mx-auto px-4 py-6">
+    <!-- Shop Name -->
+    <div class="mb-4">
+      <h2 class="text-xl font-bold">{{ section.settings.shop_name }}</h2>
+    </div>
+
+    <!-- Footer Links -->
+    <nav>
+      <ul class="flex flex-col space-y-2">
+        {% for link in linklists[section.settings.footer_menu].links %}
+          <li>
+            <a href="{{ link.url }}" class="hover:text-gray-300">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "shop_name",
+      "default": "My Shopify Store",
+      "label": "Shop Name"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer Menu"
+    }
+  ]
+}
+{% endschema %}
