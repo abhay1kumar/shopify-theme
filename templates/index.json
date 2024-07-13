@@ -5,13 +5,7 @@
       "settings": {
         "featured_collection": "all"
       }
-    },
-    "header": {
-      "type": "header"
-    },
-    "footer": {
-      "type": "footer"
     }
   },
-  "order": ["header", "featured-collection", "footer"]
+  "order": ["featured-collection"]
 }
